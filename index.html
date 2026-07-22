@@ -953,13 +953,26 @@ h2.in,.rv.in h2,.in > h2{opacity:1;transform:none}
   el.textContent='';
   caret.style.opacity=1;
   caret.classList.add('on');
-  let i=0;
-  setTimeout(function type(){
-    el.textContent=full.slice(0,i+1);
-    i++;
-    if(i<full.length){ setTimeout(type,42); }
-    else { setTimeout(()=>{caret.classList.remove('on');caret.style.opacity=0;},550); }
-  },600);
+
+  function typeIt(){
+    let i=0;
+    (function step(){
+      el.textContent=full.slice(0,i+1);
+      i++;
+      if(i<full.length){ setTimeout(step,42); }
+      else { setTimeout(eraseIt,1500); }
+    })();
+  }
+  function eraseIt(){
+    let i=full.length;
+    (function step(){
+      i--;
+      el.textContent=full.slice(0,i);
+      if(i>0){ setTimeout(step,28); }
+      else { setTimeout(typeIt,450); }
+    })();
+  }
+  setTimeout(typeIt,600);
 })();
 
 // Scroll reveal
