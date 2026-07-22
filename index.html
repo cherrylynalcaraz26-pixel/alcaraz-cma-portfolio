@@ -296,6 +296,12 @@ footer{border-top:1px solid var(--s200);background:var(--s50)}
   animation:letterIn .5s cubic-bezier(.22,1,.36,1) forwards;animation-delay:var(--d)}
 @keyframes letterIn{to{opacity:1;transform:none}}
 
+/* "run without drama." is typed out (see script at the bottom of the page) */
+.hero h1 .type-caret{display:inline-block;width:3px;height:.82em;margin-left:2px;
+  background:var(--teal);vertical-align:-.08em;opacity:0}
+.hero h1 .type-caret.on{animation:caretBlink .8s step-end infinite}
+@keyframes caretBlink{0%,100%{opacity:1}50%{opacity:0}}
+
 /* Highlight sweep on the sub-headline */
 .h1-sub{position:relative;display:inline-block;padding:.06em .16em;margin-left:-.16em}
 .hl-bg{position:absolute;inset:0;background:#99f6e4;border-radius:2px;
@@ -309,10 +315,10 @@ footer{border-top:1px solid var(--s200);background:var(--s50)}
 @keyframes subIn{to{opacity:1}}
 .hero .avail,.hero .hero-sub,.hero .hero-p,.hero .br,.hero .stats{opacity:0;animation:subIn .7s ease forwards}
 .hero .avail{animation-delay:.12s}
-.hero .hero-sub{animation-delay:1.95s}
-.hero .hero-p{animation-delay:2.08s}
-.hero .br{animation-delay:2.23s}
-.hero .stats{animation-delay:2.37s}
+.hero .hero-sub{animation-delay:2.2s}
+.hero .hero-p{animation-delay:2.35s}
+.hero .br{animation-delay:2.5s}
+.hero .stats{animation-delay:2.65s}
 
 /* gentle shimmer on the hero gradient */
 .hero{background-size:100% 200%;animation:heroShift 18s ease-in-out infinite}
@@ -320,6 +326,7 @@ footer{border-top:1px solid var(--s200);background:var(--s50)}
 
 @media(prefers-reduced-motion:reduce){
   .hero h1 .lt,.hl-tx,.h1-sub,.hero .hero-sub,.hero .hero-p,.hero .br,.hero .avail,.hero .stats{opacity:1;animation:none;transform:none}
+  .hero h1 .type-caret{display:none!important}
   .hl-bg{transform:scaleX(1);animation:none}
   .hero{animation:none}
 }
@@ -425,7 +432,7 @@ h2.in,.rv.in h2,.in > h2{opacity:1;transform:none}
       <div class="hero-txt">
         <p class="he">Calabarzon · Philippines · Since 2012</p>
         <p class="avail"><span class="dot"></span> Open to consulting &amp; executive engagements</p>
-        <h1><span class="wd"><span class="lt" style="--d:0ms">I</span></span> <span class="wd"><span class="lt" style="--d:29ms">b</span><span class="lt" style="--d:58ms">u</span><span class="lt" style="--d:87ms">i</span><span class="lt" style="--d:116ms">l</span><span class="lt" style="--d:145ms">d</span></span> <span class="wd"><span class="lt" style="--d:174ms">b</span><span class="lt" style="--d:203ms">u</span><span class="lt" style="--d:232ms">s</span><span class="lt" style="--d:261ms">i</span><span class="lt" style="--d:290ms">n</span><span class="lt" style="--d:319ms">e</span><span class="lt" style="--d:348ms">s</span><span class="lt" style="--d:377ms">s</span><span class="lt" style="--d:406ms">e</span><span class="lt" style="--d:435ms">s</span></span> <span class="wd"><span class="lt" style="--d:464ms">t</span><span class="lt" style="--d:493ms">h</span><span class="lt" style="--d:522ms">a</span><span class="lt" style="--d:551ms">t</span></span> <em><span class="wd"><span class="lt" style="--d:580ms">r</span><span class="lt" style="--d:609ms">u</span><span class="lt" style="--d:638ms">n</span></span> <span class="wd"><span class="lt" style="--d:667ms">w</span><span class="lt" style="--d:696ms">i</span><span class="lt" style="--d:725ms">t</span><span class="lt" style="--d:754ms">h</span><span class="lt" style="--d:783ms">o</span><span class="lt" style="--d:812ms">u</span><span class="lt" style="--d:841ms">t</span></span> <span class="wd"><span class="lt" style="--d:870ms">d</span><span class="lt" style="--d:899ms">r</span><span class="lt" style="--d:928ms">a</span><span class="lt" style="--d:957ms">m</span><span class="lt" style="--d:986ms">a</span><span class="lt" style="--d:1015ms">.</span></span></em><br><span class="h1-sub"><span class="hl-bg" style="--hd:1245ms"></span><span class="hl-tx">Now I do it for other companies too.</span></span></h1>
+        <h1><span class="wd"><span class="lt" style="--d:0ms">I</span></span> <span class="wd"><span class="lt" style="--d:29ms">b</span><span class="lt" style="--d:58ms">u</span><span class="lt" style="--d:87ms">i</span><span class="lt" style="--d:116ms">l</span><span class="lt" style="--d:145ms">d</span></span> <span class="wd"><span class="lt" style="--d:174ms">b</span><span class="lt" style="--d:203ms">u</span><span class="lt" style="--d:232ms">s</span><span class="lt" style="--d:261ms">i</span><span class="lt" style="--d:290ms">n</span><span class="lt" style="--d:319ms">e</span><span class="lt" style="--d:348ms">s</span><span class="lt" style="--d:377ms">s</span><span class="lt" style="--d:406ms">e</span><span class="lt" style="--d:435ms">s</span></span> <span class="wd"><span class="lt" style="--d:464ms">t</span><span class="lt" style="--d:493ms">h</span><span class="lt" style="--d:522ms">a</span><span class="lt" style="--d:551ms">t</span></span> <em><span class="type-tx">run without drama.</span><span class="type-caret"></span></em><br><span class="h1-sub"><span class="hl-bg" style="--hd:1500ms"></span><span class="hl-tx">Now I do it for other companies too.</span></span></h1>
         <p class="hero-sub"><strong>Cherrylyn "ChiChay" M. Alcaraz</strong> · Founder, Operator &amp; Consultant</p>
         <p class="hero-p">
           Eight operating entities across transport, industrial supply, upholstery, catering, rentals, and distribution, generating close to ₱1 billion in combined revenue.
@@ -937,6 +944,24 @@ h2.in,.rv.in h2,.in > h2{opacity:1;transform:none}
 <footer><div class="ft"><span>&copy; Cherrylyn M. Alcaraz &middot; Est. 2012</span><span>Calabarzon &middot; Philippines</span></div></footer>
 
 <script>
+// Typewriter effect for the hero italic line
+(function(){
+  const el=document.querySelector('.hero h1 .type-tx'), caret=document.querySelector('.hero h1 .type-caret');
+  if(!el || !caret) return;
+  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  const full=el.textContent;
+  el.textContent='';
+  caret.style.opacity=1;
+  caret.classList.add('on');
+  let i=0;
+  setTimeout(function type(){
+    el.textContent=full.slice(0,i+1);
+    i++;
+    if(i<full.length){ setTimeout(type,42); }
+    else { setTimeout(()=>{caret.classList.remove('on');caret.style.opacity=0;},550); }
+  },600);
+})();
+
 // Scroll reveal
 if('IntersectionObserver' in window){
 const io=new IntersectionObserver(e=>{for(const i of e)if(i.isIntersecting){i.target.classList.add('in');io.unobserve(i.target)}},{threshold:.08});
@@ -950,7 +975,7 @@ const co=new IntersectionObserver(es=>{
     const el=e.target, target=+el.dataset.count, sfx=el.dataset.suffix||'';
     co.unobserve(el);
     if(reduce){el.textContent=target+sfx;continue}
-    const startAfter = el.closest('.stats') && window.scrollY < 80 ? 2395 : 0; // wait for hero fade-in
+    const startAfter = el.closest('.stats') && window.scrollY < 80 ? 2680 : 0; // wait for hero fade-in
     setTimeout(()=>{
     const dur=1100, t0=performance.now();
     const tick=t=>{
