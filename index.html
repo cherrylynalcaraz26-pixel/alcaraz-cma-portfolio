@@ -432,7 +432,7 @@ h2.in,.rv.in h2,.in > h2{opacity:1;transform:none}
       <div class="hero-txt">
         <p class="he">Calabarzon · Philippines · Since 2012</p>
         <p class="avail"><span class="dot"></span> Open to consulting &amp; executive engagements</p>
-        <h1><span class="wd"><span class="lt" style="--d:0ms">I</span></span> <span class="wd"><span class="lt" style="--d:29ms">b</span><span class="lt" style="--d:58ms">u</span><span class="lt" style="--d:87ms">i</span><span class="lt" style="--d:116ms">l</span><span class="lt" style="--d:145ms">d</span></span> <span class="wd"><span class="lt" style="--d:174ms">b</span><span class="lt" style="--d:203ms">u</span><span class="lt" style="--d:232ms">s</span><span class="lt" style="--d:261ms">i</span><span class="lt" style="--d:290ms">n</span><span class="lt" style="--d:319ms">e</span><span class="lt" style="--d:348ms">s</span><span class="lt" style="--d:377ms">s</span><span class="lt" style="--d:406ms">e</span><span class="lt" style="--d:435ms">s</span></span> <span class="wd"><span class="lt" style="--d:464ms">t</span><span class="lt" style="--d:493ms">h</span><span class="lt" style="--d:522ms">a</span><span class="lt" style="--d:551ms">t</span></span> <em><span class="type-tx">run without drama.</span><span class="type-caret"></span></em><br><span class="h1-sub"><span class="hl-bg" style="--hd:1500ms"></span><span class="hl-tx">Now I do it for other companies too.</span></span></h1>
+        <h1><span class="wd"><span class="lt" style="--d:0ms">I</span></span> <span class="wd"><span class="lt" style="--d:29ms">b</span><span class="lt" style="--d:58ms">u</span><span class="lt" style="--d:87ms">i</span><span class="lt" style="--d:116ms">l</span><span class="lt" style="--d:145ms">d</span></span> <span class="wd"><span class="lt" style="--d:174ms">b</span><span class="lt" style="--d:203ms">u</span><span class="lt" style="--d:232ms">s</span><span class="lt" style="--d:261ms">i</span><span class="lt" style="--d:290ms">n</span><span class="lt" style="--d:319ms">e</span><span class="lt" style="--d:348ms">s</span><span class="lt" style="--d:377ms">s</span><span class="lt" style="--d:406ms">e</span><span class="lt" style="--d:435ms">s</span></span> <span class="wd"><span class="lt" style="--d:464ms">t</span><span class="lt" style="--d:493ms">h</span><span class="lt" style="--d:522ms">a</span><span class="lt" style="--d:551ms">t</span></span><br><em><span class="type-tx">run without drama.</span><span class="type-caret"></span></em><br><span class="h1-sub"><span class="hl-bg" style="--hd:1500ms"></span><span class="hl-tx">Now I do it for other companies too.</span></span></h1>
         <p class="hero-sub"><strong>Cherrylyn "ChiChay" M. Alcaraz</strong> · Founder, Operator &amp; Consultant</p>
         <p class="hero-p">
           Eight operating entities across transport, industrial supply, upholstery, catering, rentals, and distribution, generating close to ₱1 billion in combined revenue.
@@ -960,17 +960,12 @@ h2.in,.rv.in h2,.in > h2{opacity:1;transform:none}
       el.textContent=full.slice(0,i+1);
       i++;
       if(i<full.length){ setTimeout(step,42); }
-      else { setTimeout(eraseIt,1500); }
+      else { setTimeout(clearIt,1500); }
     })();
   }
-  function eraseIt(){
-    let i=full.length;
-    (function step(){
-      i--;
-      el.textContent=full.slice(0,i);
-      if(i>0){ setTimeout(step,28); }
-      else { setTimeout(typeIt,450); }
-    })();
+  function clearIt(){
+    el.textContent='';
+    setTimeout(typeIt,450);
   }
   setTimeout(typeIt,600);
 })();
